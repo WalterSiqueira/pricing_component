@@ -1,0 +1,170 @@
+$bold: 800;
+$thin: 600;
+@media screen and (max-width: 480px) {
+    * {
+        padding: 0;
+        margin: 0;
+        font-size: 12px;
+        font-family: Manrope;
+    }
+    body {
+        background-image: url("../../images/bg-pattern.svg");
+        background-color: hsl(230, 100%, 99%);
+        background-repeat: no-repeat;
+        display: grid;
+        grid-template-areas: 
+            ". head ."
+            ". main ."
+            ". footer .";
+        grid-template-columns: 50px 380px 50px;
+        grid-template-rows: 200px 400px 200px;
+    }
+    .head_block {
+        background-image: url("../../images/pattern-circles.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+        grid-area: head;
+        display: grid;
+        grid-template-areas: 
+            ". . ."
+            ". center ."
+            ". . .";
+        grid-template-columns: 20px 340px 20px;
+        grid-template-rows: 50px 100px 50px;
+        .title_head {
+            font-size: 25px;
+            font-weight: $bold;
+            text-align: center;
+            margin: 20px 0 0 0;
+            grid-area: center;
+        }
+        .subtitle_head {
+            color: hsl(225, 20%, 60%);
+            font-size: 16px;
+            text-align: center;
+            margin: 50px 0 0 0;
+            grid-area: center;
+        }
+    }
+    .main_block {
+        background-color: white;
+        display: grid;
+        grid-area: main;
+        grid-template-areas: 
+            "pageV"
+            "slider"
+            "MValue"
+            "choice"
+            "bottom";
+        grid-template-columns: 380px;
+        grid-template-rows: 50px 100px 50px 50px 150px;
+        .pageViews {
+            color: hsl(225, 20%, 60%);
+            text-align: center;
+            margin: 20px 0 0 0;
+            font-size: 16px;
+            grid-area: pageV;
+        }
+    }
+    .MonthValue_block {
+        display: grid;
+        grid-template-areas: 
+            ". value title .";
+        grid-template-columns: 100px 90px 90px 100px;
+        grid-template-rows: 50px;
+        grid-area: MValue;
+        .value_month {
+            grid-area: value;
+            font-size: 25px;
+        }
+        .monthValue {
+            color: hsl(225, 20%, 60%);
+            grid-area: title;
+            font-size: 20px;
+            margin: 0 0 0 10px;
+        }
+    }
+    .choice_block {
+        width: 100%;
+        height: 100%;
+        grid-area: choice;
+        display: grid;
+        grid-template-areas: 
+            "month switch yearly discount";
+        grid-template-columns: 130px 60px 110px 85px;
+        grid-template-rows: 50px;
+        .month_choice {
+            margin: 0 0 0 20px;
+            padding: 10px 0 0 0;
+            font-size: 14px;
+            grid-area: month;
+            color: hsl(225, 20%, 60%);
+        }
+        .yearly_choice {
+            color: hsl(225, 20%, 60%);
+            margin: 0 0  0 20px;
+            padding: 10px 0 0 0;
+            font-size: 14px;
+            grid-area: yearly;
+        }
+        .discount_value {
+            grid-area: discount;
+            font-size: 14px;
+            border-radius: 10px;
+            background-color: hsl(14, 92%, 95%);
+            border-color: hsl(14, 92%, 95%);
+            width: 50%;
+            height: 30%;
+            text-align: center;
+            color: hsl(15, 100%, 70%);
+            margin: 10px 0 0 0;
+            padding: 5px 0 0 0;
+        }
+        .discount {
+            display: none;
+        }
+    }
+    .list_block {
+        display:grid;
+        grid-area: bottom;
+        grid-template-areas: 
+            ". unlimited ."
+            ". ownership ."
+            ". email ."
+            ". btn .";
+        grid-template-rows: 30px 30px 30px 50px;
+        grid-template-columns: 120px 140px 120px;
+        .unlimited_item {
+            color: hsl(225, 20%, 60%);
+            margin: 0 0 0 5px;
+            padding: 10px 0 0 0;
+            grid-area: unlimited;
+        }
+        .ownership_item {
+            color: hsl(225, 20%, 60%);
+            padding: 10px 0 0 0;
+            grid-area: ownership;
+        }
+        .email_item {
+            color: hsl(225, 20%, 60%);
+            padding: 10px 0 0 0;
+            margin: 0 0 0 20px;
+            grid-area: email;
+        }
+        .trial_btn {
+            margin: 10px 0 0 0;
+            padding: 3px 0 0 0;
+            grid-area: btn;
+            width: 140px;
+            height: 30px;
+            border-radius: 10px;
+            border-color: hsl(227, 35%, 25%);
+            background-color: hsl(227, 35%, 25%);
+            color: white;
+        }
+    }
+    .attribution {
+        grid-area: footer;
+    }
+}

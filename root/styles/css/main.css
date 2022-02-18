@@ -1,0 +1,314 @@
+/* line 1, ../sass/slider.scss */
+.slidecontainer {
+  grid-area: slider;
+  width: 100%;
+  /* Width of the outside container */
+}
+
+/* The slider itself */
+/* line 7, ../sass/slider.scss */
+.slider1 {
+  margin: 40px 0 0 0;
+  border-radius: 10px;
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  /* Full-width */
+  height: 15px;
+  /* Specified height */
+  background: #a5f3eb;
+  /* Grey background */
+  outline: none;
+  /* Remove outline */
+  opacity: 0.7;
+  /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s;
+  /* 0.2 seconds transition on hover */
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+/* line 22, ../sass/slider.scss */
+.slider1:hover {
+  opacity: 1;
+  /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+/* line 27, ../sass/slider.scss */
+.slider1::-webkit-slider-thumb {
+  border-radius: 30px;
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  background-image: url("../../images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 35px;
+  /* Set a specific slider handle width */
+  height: 35px;
+  /* Slider handle height */
+  background-color: #10d5c2;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+/* switche styles */
+/* The switch - the box around the slider */
+/* line 42, ../sass/slider.scss */
+.switch {
+  grid-area: switch;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+/* line 51, ../sass/slider.scss */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+/* line 58, ../sass/slider.scss */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/* line 70, ../sass/slider.scss */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/* line 82, ../sass/slider.scss */
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+/* line 86, ../sass/slider.scss */
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196F3;
+          box-shadow: 0 0 1px #2196F3;
+}
+
+/* line 90, ../sass/slider.scss */
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+/* line 97, ../sass/slider.scss */
+.slider.round {
+  border-radius: 34px;
+}
+
+/* line 101, ../sass/slider.scss */
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 480px) {
+  /* line 4, ../sass/mobile.scss */
+  * {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    font-family: Manrope;
+  }
+
+  /* line 10, ../sass/mobile.scss */
+  body {
+    background-image: url("../../images/bg-pattern.svg");
+    background-color: #fafbff;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-areas: ". head ." ". main ." ". footer .";
+    grid-template-columns: 50px 380px 50px;
+    grid-template-rows: 200px 400px 200px;
+  }
+
+  /* line 22, ../sass/mobile.scss */
+  .head_block {
+    background-image: url("../../images/pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    grid-area: head;
+    display: grid;
+    grid-template-areas: ". . ." ". center ." ". . .";
+    grid-template-columns: 20px 340px 20px;
+    grid-template-rows: 50px 100px 50px;
+  }
+  /* line 35, ../sass/mobile.scss */
+  .head_block .title_head {
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    margin: 20px 0 0 0;
+    grid-area: center;
+  }
+  /* line 42, ../sass/mobile.scss */
+  .head_block .subtitle_head {
+    color: #858fad;
+    font-size: 16px;
+    text-align: center;
+    margin: 50px 0 0 0;
+    grid-area: center;
+  }
+
+  /* line 50, ../sass/mobile.scss */
+  .main_block {
+    background-color: white;
+    display: grid;
+    grid-area: main;
+    grid-template-areas: "pageV" "slider" "MValue" "choice" "bottom";
+    grid-template-columns: 380px;
+    grid-template-rows: 50px 100px 50px 50px 150px;
+  }
+  /* line 62, ../sass/mobile.scss */
+  .main_block .pageViews {
+    color: #858fad;
+    text-align: center;
+    margin: 20px 0 0 0;
+    font-size: 16px;
+    grid-area: pageV;
+  }
+
+  /* line 70, ../sass/mobile.scss */
+  .MonthValue_block {
+    display: grid;
+    grid-template-areas: ". value title .";
+    grid-template-columns: 100px 90px 90px 100px;
+    grid-template-rows: 50px;
+    grid-area: MValue;
+  }
+  /* line 77, ../sass/mobile.scss */
+  .MonthValue_block .value_month {
+    grid-area: value;
+    font-size: 25px;
+  }
+  /* line 81, ../sass/mobile.scss */
+  .MonthValue_block .monthValue {
+    color: #858fad;
+    grid-area: title;
+    font-size: 20px;
+    margin: 0 0 0 10px;
+  }
+
+  /* line 88, ../sass/mobile.scss */
+  .choice_block {
+    width: 100%;
+    height: 100%;
+    grid-area: choice;
+    display: grid;
+    grid-template-areas: "month switch yearly discount";
+    grid-template-columns: 130px 60px 110px 85px;
+    grid-template-rows: 50px;
+  }
+  /* line 97, ../sass/mobile.scss */
+  .choice_block .month_choice {
+    margin: 0 0 0 20px;
+    padding: 10px 0 0 0;
+    font-size: 14px;
+    grid-area: month;
+    color: #858fad;
+  }
+  /* line 104, ../sass/mobile.scss */
+  .choice_block .yearly_choice {
+    color: #858fad;
+    margin: 0 0  0 20px;
+    padding: 10px 0 0 0;
+    font-size: 14px;
+    grid-area: yearly;
+  }
+  /* line 111, ../sass/mobile.scss */
+  .choice_block .discount_value {
+    grid-area: discount;
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: #feece7;
+    border-color: #feece7;
+    width: 50%;
+    height: 30%;
+    text-align: center;
+    color: #ff8c66;
+    margin: 10px 0 0 0;
+    padding: 5px 0 0 0;
+  }
+  /* line 124, ../sass/mobile.scss */
+  .choice_block .discount {
+    display: none;
+  }
+
+  /* line 128, ../sass/mobile.scss */
+  .list_block {
+    display: grid;
+    grid-area: bottom;
+    grid-template-areas: ". unlimited ." ". ownership ." ". email ." ". btn .";
+    grid-template-rows: 30px 30px 30px 50px;
+    grid-template-columns: 120px 140px 120px;
+  }
+  /* line 138, ../sass/mobile.scss */
+  .list_block .unlimited_item {
+    color: #858fad;
+    margin: 0 0 0 5px;
+    padding: 10px 0 0 0;
+    grid-area: unlimited;
+  }
+  /* line 144, ../sass/mobile.scss */
+  .list_block .ownership_item {
+    color: #858fad;
+    padding: 10px 0 0 0;
+    grid-area: ownership;
+  }
+  /* line 149, ../sass/mobile.scss */
+  .list_block .email_item {
+    color: #858fad;
+    padding: 10px 0 0 0;
+    margin: 0 0 0 20px;
+    grid-area: email;
+  }
+  /* line 155, ../sass/mobile.scss */
+  .list_block .trial_btn {
+    margin: 10px 0 0 0;
+    padding: 3px 0 0 0;
+    grid-area: btn;
+    width: 140px;
+    height: 30px;
+    border-radius: 10px;
+    border-color: #293356;
+    background-color: #293356;
+    color: white;
+  }
+
+  /* line 167, ../sass/mobile.scss */
+  .attribution {
+    grid-area: footer;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

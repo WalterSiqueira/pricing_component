@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="font" href="https://fonts.google.com/specimen/Manrope">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./styles/css/main.css">
   <title>Frontend Mentor | Interactive pricing component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,25 +15,40 @@
   </style>
 </head>
 <body>
-
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
-
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
+  <header class="head_block">
+    <h1 class="title_head">Simple, traffic-based pricing</h1>
+    <h2 class="subtitle_head">Sign-up for our 30-day trial.</br> No credit card required.</h2>
+  </header>
+  <main class="main_block">
+      <h3 class="pageViews">100k Pageviews</h3>
+      <div class="MonthValue_block">
+          <h2 id="value" class="value_month">$100.00</h2>
+          <h3 class="monthValue"> /month</h3>
+      </div>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider1" id="myRange">
+      </div>
+      <section class="choice_block">
+          <h4 class="month_choice">Monthly Billing</h4>
+          <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+          </label>
+          <h4 class="yearly_choice">Yearly Billing</h4> 
+          <h4 class="discount_value">-25% 
+          <h4 class="discount">discount</h4></h4>
+      </section>
+    <section class="list_block">
+      <h3 class="unlimited_item">✔ Unlimited websites</h3>
+      <h3 class="ownership_item">✔ 100% data ownership</h3>
+      <h3 class="email_item">✔ Email reports</h3>
+      <button class="trial_btn">Start my trial</button>
+    </section>
+  </main>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/WalterSiqueira">Walter Siqueira</a>.
   </div>
 </body>
 </html>
