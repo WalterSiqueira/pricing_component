@@ -65,6 +65,19 @@ $thin: 600;
             margin: 20px 0 0 0;
             font-size: 16px;
             grid-area: pageV;
+            display: grid;
+            grid-template-areas: 
+                ". Value pageView .";
+            grid-template-columns: 140px 50px 50px 140px;
+            grid-template-rows: 50px;
+            p{
+                font-size: 20px;
+                grid-area: Value;
+            }
+            .pageViews_title{
+                font-size: 20px;
+                grid-area: pageView;
+            }
         }
     }
     .MonthValue_block {
@@ -78,7 +91,7 @@ $thin: 600;
             grid-area: value;
             font-size: 25px;
         }
-        .monthValue {
+        .monthTitle {
             color: hsl(225, 20%, 60%);
             grid-area: title;
             font-size: 20px;

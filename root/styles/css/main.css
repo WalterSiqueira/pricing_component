@@ -196,9 +196,23 @@ input:checked + .slider:before {
     margin: 20px 0 0 0;
     font-size: 16px;
     grid-area: pageV;
+    display: grid;
+    grid-template-areas: ". Value pageView .";
+    grid-template-columns: 140px 50px 50px 140px;
+    grid-template-rows: 50px;
+  }
+  /* line 73, ../sass/mobile.scss */
+  .main_block .pageViews p {
+    font-size: 20px;
+    grid-area: Value;
+  }
+  /* line 77, ../sass/mobile.scss */
+  .main_block .pageViews .pageViews_title {
+    font-size: 20px;
+    grid-area: pageView;
   }
 
-  /* line 70, ../sass/mobile.scss */
+  /* line 83, ../sass/mobile.scss */
   .MonthValue_block {
     display: grid;
     grid-template-areas: ". value title .";
@@ -206,20 +220,20 @@ input:checked + .slider:before {
     grid-template-rows: 50px;
     grid-area: MValue;
   }
-  /* line 77, ../sass/mobile.scss */
+  /* line 90, ../sass/mobile.scss */
   .MonthValue_block .value_month {
     grid-area: value;
     font-size: 25px;
   }
-  /* line 81, ../sass/mobile.scss */
-  .MonthValue_block .monthValue {
+  /* line 94, ../sass/mobile.scss */
+  .MonthValue_block .monthTitle {
     color: #858fad;
     grid-area: title;
     font-size: 20px;
     margin: 0 0 0 10px;
   }
 
-  /* line 88, ../sass/mobile.scss */
+  /* line 101, ../sass/mobile.scss */
   .choice_block {
     width: 100%;
     height: 100%;
@@ -229,7 +243,7 @@ input:checked + .slider:before {
     grid-template-columns: 130px 60px 110px 85px;
     grid-template-rows: 50px;
   }
-  /* line 97, ../sass/mobile.scss */
+  /* line 110, ../sass/mobile.scss */
   .choice_block .month_choice {
     margin: 0 0 0 20px;
     padding: 10px 0 0 0;
@@ -237,7 +251,7 @@ input:checked + .slider:before {
     grid-area: month;
     color: #858fad;
   }
-  /* line 104, ../sass/mobile.scss */
+  /* line 117, ../sass/mobile.scss */
   .choice_block .yearly_choice {
     color: #858fad;
     margin: 0 0  0 20px;
@@ -245,7 +259,7 @@ input:checked + .slider:before {
     font-size: 14px;
     grid-area: yearly;
   }
-  /* line 111, ../sass/mobile.scss */
+  /* line 124, ../sass/mobile.scss */
   .choice_block .discount_value {
     grid-area: discount;
     font-size: 14px;
@@ -259,12 +273,12 @@ input:checked + .slider:before {
     margin: 10px 0 0 0;
     padding: 5px 0 0 0;
   }
-  /* line 124, ../sass/mobile.scss */
+  /* line 137, ../sass/mobile.scss */
   .choice_block .discount {
     display: none;
   }
 
-  /* line 128, ../sass/mobile.scss */
+  /* line 141, ../sass/mobile.scss */
   .list_block {
     display: grid;
     grid-area: bottom;
@@ -272,27 +286,27 @@ input:checked + .slider:before {
     grid-template-rows: 30px 30px 30px 50px;
     grid-template-columns: 120px 140px 120px;
   }
-  /* line 138, ../sass/mobile.scss */
+  /* line 151, ../sass/mobile.scss */
   .list_block .unlimited_item {
     color: #858fad;
     margin: 0 0 0 5px;
     padding: 10px 0 0 0;
     grid-area: unlimited;
   }
-  /* line 144, ../sass/mobile.scss */
+  /* line 157, ../sass/mobile.scss */
   .list_block .ownership_item {
     color: #858fad;
     padding: 10px 0 0 0;
     grid-area: ownership;
   }
-  /* line 149, ../sass/mobile.scss */
+  /* line 162, ../sass/mobile.scss */
   .list_block .email_item {
     color: #858fad;
     padding: 10px 0 0 0;
     margin: 0 0 0 20px;
     grid-area: email;
   }
-  /* line 155, ../sass/mobile.scss */
+  /* line 168, ../sass/mobile.scss */
   .list_block .trial_btn {
     margin: 10px 0 0 0;
     padding: 3px 0 0 0;
@@ -305,7 +319,207 @@ input:checked + .slider:before {
     color: white;
   }
 
-  /* line 167, ../sass/mobile.scss */
+  /* line 180, ../sass/mobile.scss */
+  .attribution {
+    grid-area: footer;
+  }
+}
+@media screen and (min-width: 481px) {
+  /* line 4, ../sass/medium.scss */
+  * {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: Manrope;
+    color: #858fad;
+  }
+
+  /* line 11, ../sass/medium.scss */
+  body {
+    background-image: url("../../images/bg-pattern.svg");
+    background-color: #fafbff;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-areas: ". head ." ". main ." ". footer .";
+    grid-template-columns: 212px 600px 212px;
+    grid-template-rows: 200px 400px 200px;
+  }
+
+  /* line 23, ../sass/medium.scss */
+  .head_block {
+    background-image: url("../../images/pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    grid-area: head;
+    display: grid;
+    grid-template-areas: ". . ." ". center ." ". . .";
+    grid-template-columns: 100px 400px 100px;
+    grid-template-rows: 50px 100px 50px;
+    grid-area: head;
+  }
+  /* line 37, ../sass/medium.scss */
+  .head_block .title_head {
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    grid-area: center;
+    color: black;
+  }
+  /* line 44, ../sass/medium.scss */
+  .head_block .subtitle_head {
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    margin: 30px 0 0 0;
+    grid-area: center;
+  }
+
+  /* line 52, ../sass/medium.scss */
+  .main_block {
+    display: grid;
+    grid-template-areas: "pageViews pageViews . monthBlock monthBlock ." "slider slider slider slider slider slider" "choiceBlock choiceBlock choiceBlock choiceBlock choiceBlock choiceBlock" "bottom bottom bottom bottom bottom bottom";
+    grid-template-columns: 100px 100px 100px 100px 100px 100px;
+    grid-template-rows: 50px 100px 50px 200px;
+    grid-area: main;
+    background-color: white;
+  }
+  /* line 63, ../sass/medium.scss */
+  .main_block .pageViews {
+    grid-area: pageViews;
+    display: grid;
+    grid-template-areas: "value title";
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 100%;
+    margin: 20px 0 0 0;
+  }
+  /* line 71, ../sass/medium.scss */
+  .main_block .pageViews .pageViews_title {
+    font-size: 20px;
+    padding: 10px 0 0 0;
+    grid-area: title;
+  }
+  /* line 76, ../sass/medium.scss */
+  .main_block .pageViews p {
+    padding: 10px 0 0 50px;
+    font-size: 20px;
+    grid-area: value;
+  }
+  /* line 82, ../sass/medium.scss */
+  .main_block .MonthValue_block {
+    display: grid;
+    grid-template-areas: "value title";
+    grid-template-columns: 140px 60px;
+    grid-template-rows: 50px;
+    grid-area: monthBlock;
+    margin: 20px 0 0 0;
+  }
+  /* line 90, ../sass/medium.scss */
+  .main_block .MonthValue_block .value_month {
+    padding: 0 0 0 30px;
+    font-size: 30px;
+    grid-area: value;
+    color: black;
+  }
+  /* line 96, ../sass/medium.scss */
+  .main_block .MonthValue_block .monthTitle {
+    font-size: 16px;
+    padding: 10px 0 0 0;
+    grid-area: title;
+  }
+  /* line 102, ../sass/medium.scss */
+  .main_block .slidecontainer {
+    grid-area: slider;
+  }
+  /* line 105, ../sass/medium.scss */
+  .main_block .choice_block {
+    display: grid;
+    grid-template-areas: ". monthly switch yearly discount";
+    grid-template-columns: 100px 100px 70px 130px 100px 100px;
+    grid-template-rows: 50px;
+    grid-area: choiceBlock;
+  }
+  /* line 112, ../sass/medium.scss */
+  .main_block .choice_block .month_choice {
+    padding: 10px 0 0 0;
+    font-size: 14px;
+    grid-area: monthly;
+  }
+  /* line 117, ../sass/medium.scss */
+  .main_block .choice_block .switch {
+    grid-area: switch;
+  }
+  /* line 120, ../sass/medium.scss */
+  .main_block .choice_block .yearly_choice {
+    padding: 10px 0 0 0;
+    font-size: 14px;
+    grid-area: yearly;
+  }
+  /* line 125, ../sass/medium.scss */
+  .main_block .choice_block .discount_value {
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: #feece7;
+    border-color: #feece7;
+    width: 50%;
+    height: 30%;
+    margin: 10px 0 0 0;
+    grid-area: discount;
+    color: #ff8c66;
+  }
+  /* line 136, ../sass/medium.scss */
+  .main_block .choice_block .discount {
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: #feece7;
+    border-color: #feece7;
+    width: 60%;
+    height: 30%;
+    margin: 10px 0 0 40px;
+    grid-area: discount;
+    color: #ff8c66;
+  }
+  /* line 148, ../sass/medium.scss */
+  .main_block .list_block {
+    display: grid;
+    grid-area: bottom;
+    grid-template-areas: ". unlimited ." ". ownership btn" ". email .";
+    grid-template-rows: 50px 40px 60px;
+    grid-template-columns: 100px 300px 200px;
+  }
+  /* line 157, ../sass/medium.scss */
+  .main_block .list_block .unlimited_item {
+    color: #858fad;
+    margin: 0 0 0 5px;
+    padding: 30px 0 0 0;
+    grid-area: unlimited;
+  }
+  /* line 163, ../sass/medium.scss */
+  .main_block .list_block .ownership_item {
+    color: #858fad;
+    padding: 10px 0 0 0;
+    grid-area: ownership;
+  }
+  /* line 168, ../sass/medium.scss */
+  .main_block .list_block .email_item {
+    color: #858fad;
+    padding: 0 0 0 20px;
+    margin: 0 0 30px 0;
+    grid-area: email;
+  }
+  /* line 174, ../sass/medium.scss */
+  .main_block .list_block .trial_btn {
+    padding: 3px 0 0 0;
+    grid-area: btn;
+    width: 140px;
+    height: 40px;
+    border-radius: 30px;
+    border-color: #293356;
+    background-color: #293356;
+    color: white;
+  }
+
+  /* line 187, ../sass/medium.scss */
   .attribution {
     grid-area: footer;
   }
