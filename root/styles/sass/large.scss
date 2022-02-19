@@ -1,6 +1,4 @@
-$bold: 800;
-$thin: 600;
-@media screen and (min-width: 481px) and (max-width: 1024px){
+@media screen and (min-width: 1025px) {
     *{
         margin: 0;
         padding: 0;
@@ -17,8 +15,8 @@ $thin: 600;
             ". head ."
             ". main ."
             ". footer .";
-        grid-template-columns: 212px 600px 212px;
-        grid-template-rows: 200px 400px 200px;
+        grid-template-columns: 220px 1000px 220px;
+        grid-template-rows: 200px 400px 200px;            
     }
     .head_block{
         background-image: url("../../images/pattern-circles.svg");
@@ -31,9 +29,9 @@ $thin: 600;
             ". . ."
             ". center ."
             ". . .";
-        grid-template-columns: 100px 400px 100px;
+        grid-template-columns: 200px 600px 200px;
         grid-template-rows: 50px 100px 50px;
-        grid-area: head;
+    }
         .title_head{
             font-size: 25px;
             font-weight: $bold;
@@ -48,54 +46,55 @@ $thin: 600;
             margin: 30px 0 0 0;
             grid-area: center;
         }
-    }
-    .main_block{
+        .main_block{
         display: grid;
         grid-template-areas: 
             "pageViews pageViews . monthBlock monthBlock ."
             "slider slider slider slider slider slider"
             "choiceBlock choiceBlock choiceBlock choiceBlock choiceBlock choiceBlock"
             "bottom bottom bottom bottom bottom bottom";
-        grid-template-columns: 100px 100px 100px 100px 100px 100px;
-        grid-template-rows: 50px 100px 50px 200px;
+        grid-template-columns: 200px 200px 100px 100px 200px 200px;
+         grid-template-rows: 50px 100px 50px 200px;
         grid-area: main;
         background-color: white;
-        .pageViews{
+        }
+            .pageViews{
                 grid-area: pageViews;
                 display: grid;
                 grid-template-areas: 
                     "value title";
-                grid-template-columns: 100px 100px;
+                grid-template-columns: 300px 100px;
                 grid-template-rows: 100%;
                 margin: 20px 0 0 0;
-            .pageViews_title{
-                font-size: 20px;
-                padding: 10px 0 0 0;
-                grid-area: title;
-            }
-            p{
-                padding: 10px 0 0 50px;
+                .pageViews_title{
+                    font-size: 20px;
+                    padding: 10px 0 0 0;
+                    grid-area: title;
+                }
+                p{
+                padding: 10px 0 0 250px;
                 font-size: 20px;
                 grid-area: value;
+                }
             }
-        }
+        
         .MonthValue_block{
             display: grid;
             grid-template-areas: 
                 "value title";
-            grid-template-columns: 140px 60px;
+            grid-template-columns: 200px 200px;
             grid-template-rows: 50px;
             grid-area: monthBlock;
             margin: 20px 0 0 0;
             .value_month{
-                padding: 0 0 0 30px;
+                padding: 0 0 0 100px;
                 font-size: 30px;
                 grid-area: value;
                 color: black;
             }
             .monthTitle{
-                font-size: 16px;
-                padding: 10px 0 0 0;
+                font-size: 20px;
+                padding: 10px 0 0 10px;
                 grid-area: title;
             }
         }
@@ -105,42 +104,43 @@ $thin: 600;
         .choice_block{
             display: grid;
             grid-template-areas: 
-                ". monthly switch yearly discount";
-            grid-template-columns: 100px 100px 70px 130px 100px 100px;
+                ". monthly switch yearly discount .";
+            grid-template-columns: 325px 150px 50px 150px 162px 162px;
             grid-template-rows: 50px;
             grid-area: choiceBlock;
             .month_choice{
                 padding: 10px 0 0 0;
-                font-size: 14px;
+                font-size: 20px;
                 grid-area: monthly;
             }
             .switch{
                 grid-area: switch;
             }
             .yearly_choice{
-                padding: 10px 0 0 0;
-                font-size: 14px;
+                padding: 10px 0 0 30px;
+                font-size: 20px;
                 grid-area: yearly;
             }
             .discount_value {
-                font-size: 14px;
+                font-size: 20px;
                 border-radius: 10px;
                 background-color: hsl(14, 92%, 95%);
                 border-color: hsl(14, 92%, 95%);
-                width: 50%;
-                height: 30%;
+                width: 40%;
+                height: 35%;
                 margin: 10px 0 0 0;
                 grid-area: discount;
                 color: hsl(15, 100%, 70%);
             }
             .discount{
-                font-size: 14px;
+                font-size: 20px;
                 border-radius: 10px;
                 background-color: hsl(14, 92%, 95%);
                 border-color: hsl(14, 92%, 95%);
                 width: 60%;
-                height: 30%;
+                height: 35%;
                 margin: 10px 0 0 40px;
+                padding: 0 0 0 10px;
                 grid-area: discount;
                 color: hsl(15, 100%, 70%);
             }
@@ -153,38 +153,40 @@ $thin: 600;
                 ". ownership btn"
                 ". email .";
             grid-template-rows: 50px 40px 60px;
-            grid-template-columns: 100px 300px 200px;
-        .unlimited_item {
-            color: hsl(225, 20%, 60%);
-            margin: 0 0 0 5px;
-            padding: 30px 0 0 0;
-            grid-area: unlimited;
+            grid-template-columns: 100px 500px 400px;
+            .unlimited_item {
+                color: hsl(225, 20%, 60%);
+                font-size: 18px;
+                margin: 0 0 0 5px;
+                padding: 30px 0 0 0;
+                grid-area: unlimited;
+            }
+            .ownership_item {
+                color: hsl(225, 20%, 60%);
+                font-size: 18px;
+                padding: 10px 0 0 0;
+                grid-area: ownership;
+            }
+            .email_item {
+                color: hsl(225, 20%, 60%);
+                font-size: 18px;
+                padding: 0 0 0 20px;
+                margin: 0 0 30px 0;
+                grid-area: email;
+            }
+            .trial_btn {
+                margin: 0 0 0 50px;
+                padding: 3px 0 0 0;
+                grid-area: btn;
+                width: 240px;
+                height: 80px;
+                border-radius: 30px;
+                border-color: hsl(227, 35%, 25%);
+                background-color: hsl(227, 35%, 25%);
+                font-size: 20px;
+                color: white;
+            }
         }
-        .ownership_item {
-            color: hsl(225, 20%, 60%);
-            padding: 10px 0 0 0;
-            grid-area: ownership;
-        }
-        .email_item {
-            color: hsl(225, 20%, 60%);
-            padding: 0 0 0 20px;
-            margin: 0 0 30px 0;
-            grid-area: email;
-        }
-        .trial_btn {
-            padding: 3px 0 0 0;
-            grid-area: btn;
-            width: 140px;
-            height: 40px;
-            border-radius: 30px;
-            border-color: hsl(227, 35%, 25%);
-            background-color: hsl(227, 35%, 25%);
-            font-size: 14px;
-            color: white;
-        }
-        }
-    }
-
     .attribution{
         grid-area: footer;
     }
