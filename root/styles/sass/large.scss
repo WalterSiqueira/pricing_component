@@ -2,7 +2,7 @@
     *{
         margin: 0;
         padding: 0;
-        font-size: 12px;
+        font-size: 1em;
         font-family: Manrope;
         color: hsl(225, 20%, 60%);
     }
@@ -15,8 +15,8 @@
             ". head ."
             ". main ."
             ". footer .";
-        grid-template-columns: 220px 1000px 220px;
-        grid-template-rows: 200px 400px 200px;            
+        grid-template-columns: 2fr 8fr 2fr;
+        grid-template-rows: 2fr 4fr 2fr;            
     }
     .head_block{
         background-image: url("../../images/pattern-circles.svg");
@@ -29,21 +29,21 @@
             ". . ."
             ". center ."
             ". . .";
-        grid-template-columns: 200px 600px 200px;
-        grid-template-rows: 50px 100px 50px;
+        grid-template-columns: 2fr 4fr 2fr;
+        grid-template-rows: 0.5fr 1fr 0.5;
     }
         .title_head{
-            font-size: 25px;
+            font-size: 2em;
             font-weight: $bold;
             text-align: center;
             grid-area: center;
             color: black;
         }
         .subtitle_head{
-            font-size: 20px;
+            font-size: 2em;
             font-weight: $bold;
             text-align: center;
-            margin: 30px 0 0 0;
+            margin: 18% 0 0 0;
             grid-area: center;
         }
         .main_block{
@@ -53,8 +53,8 @@
             "slider slider slider slider slider slider"
             "choiceBlock choiceBlock choiceBlock choiceBlock choiceBlock choiceBlock"
             "bottom bottom bottom bottom bottom bottom";
-        grid-template-columns: 200px 200px 100px 100px 200px 200px;
-         grid-template-rows: 50px 100px 50px 200px;
+        grid-template-columns: 2fr 2fr 1fr 1fr 2fr 2fr;
+         grid-template-rows: 0.5fr 1fr 0.5fr 2fr;
         grid-area: main;
         background-color: white;
         }
@@ -63,17 +63,17 @@
                 display: grid;
                 grid-template-areas: 
                     "value title";
-                grid-template-columns: 300px 100px;
-                grid-template-rows: 100%;
-                margin: 20px 0 0 0;
+                grid-template-columns: 2fr 1fr;
+                grid-template-rows: 1fr;
+                margin: 5% 0 0 0;
                 .pageViews_title{
-                    font-size: 20px;
+                    font-size: 2em;
                     padding: 10px 0 0 0;
                     grid-area: title;
                 }
                 p{
-                padding: 10px 0 0 250px;
-                font-size: 20px;
+                padding: 5% 0 0 55%;
+                font-size: 2em;
                 grid-area: value;
                 }
             }
@@ -82,19 +82,19 @@
             display: grid;
             grid-template-areas: 
                 "value title";
-            grid-template-columns: 200px 200px;
-            grid-template-rows: 50px;
+            grid-template-columns: 2fr 2fr;
+            grid-template-rows: 0.5fr;
             grid-area: monthBlock;
-            margin: 20px 0 0 0;
+            margin: 5% 0 0 0;
             .value_month{
-                padding: 0 0 0 100px;
-                font-size: 30px;
+                padding: 0 0 0 15%;
+                font-size: 3em;
                 grid-area: value;
                 color: black;
             }
             .monthTitle{
-                font-size: 20px;
-                padding: 10px 0 0 10px;
+                font-size: 2em;
+                padding: 5% 0 0 25%;
                 grid-area: title;
             }
         }
@@ -105,42 +105,42 @@
             display: grid;
             grid-template-areas: 
                 ". monthly switch yearly discount .";
-            grid-template-columns: 325px 150px 50px 150px 162px 162px;
-            grid-template-rows: 50px;
+            grid-template-columns: 1fr 3fr 0.5fr 2fr 2fr 2fr;
+            grid-template-rows: 0.5fr;
             grid-area: choiceBlock;
             .month_choice{
-                padding: 10px 0 0 0;
-                font-size: 20px;
+                padding: 0 0 0 30%;
+                font-size: 1.6em;
                 grid-area: monthly;
             }
             .switch{
                 grid-area: switch;
             }
             .yearly_choice{
-                padding: 10px 0 0 30px;
-                font-size: 20px;
+                padding: 0 0 0 10%;
+                font-size: 1.6em;
                 grid-area: yearly;
             }
             .discount_value {
-                font-size: 20px;
-                border-radius: 10px;
+                font-size: 1.6em;
+                border-radius: 10vh;
                 background-color: hsl(14, 92%, 95%);
                 border-color: hsl(14, 92%, 95%);
-                width: 40%;
-                height: 35%;
-                margin: 10px 0 0 0;
+                width: 60%;
+                height: 65%;
+                margin: 0 0 0 35%;
                 grid-area: discount;
                 color: hsl(15, 100%, 70%);
             }
             .discount{
-                font-size: 20px;
-                border-radius: 10px;
+                font-size: 1.6em;
+                border-radius: 10vh;
                 background-color: hsl(14, 92%, 95%);
                 border-color: hsl(14, 92%, 95%);
                 width: 60%;
-                height: 35%;
-                margin: 10px 0 0 40px;
-                padding: 0 0 0 10px;
+                height: 65%;
+                margin: 0 0 0 65%;
+                padding: 0 0 0 5%;
                 grid-area: discount;
                 color: hsl(15, 100%, 70%);
             }
@@ -152,38 +152,38 @@
                 ". unlimited ."
                 ". ownership btn"
                 ". email .";
-            grid-template-rows: 50px 40px 60px;
-            grid-template-columns: 100px 500px 400px;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 6fr 4fr;
             .unlimited_item {
                 color: hsl(225, 20%, 60%);
-                font-size: 18px;
-                margin: 0 0 0 5px;
-                padding: 30px 0 0 0;
+                font-size: 2em;
+                margin: 0 0 0 3%;
+                padding: 5% 0 0 0;
                 grid-area: unlimited;
             }
             .ownership_item {
                 color: hsl(225, 20%, 60%);
-                font-size: 18px;
-                padding: 10px 0 0 0;
+                font-size: 2em;
+                padding: 2% 0 0 0;
                 grid-area: ownership;
             }
             .email_item {
                 color: hsl(225, 20%, 60%);
-                font-size: 18px;
-                padding: 0 0 0 20px;
-                margin: 0 0 30px 0;
+                font-size: 2em;
+                padding: 0 0 0 5%;
+                margin: 0 0 7% 0;
                 grid-area: email;
             }
             .trial_btn {
-                margin: 0 0 0 50px;
-                padding: 3px 0 0 0;
+                margin: 0 0 0 30%;
+                padding: 2% 0 0 0;
                 grid-area: btn;
-                width: 240px;
-                height: 80px;
-                border-radius: 30px;
+                width: 50%;
+                height: 87%;
+                border-radius: 30vh;
                 border-color: hsl(227, 35%, 25%);
                 background-color: hsl(227, 35%, 25%);
-                font-size: 20px;
+                font-size: 1.5em;
                 color: white;
             }
         }

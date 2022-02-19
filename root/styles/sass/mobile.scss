@@ -1,10 +1,10 @@
 $bold: 800;
 $thin: 600;
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 800px) {
     * {
         padding: 0;
         margin: 0;
-        font-size: 12px;
+        font-size: 1em;
         font-family: Manrope;
     }
     body {
@@ -16,8 +16,8 @@ $thin: 600;
             ". head ."
             ". main ."
             ". footer .";
-        grid-template-columns: 50px 380px 50px;
-        grid-template-rows: 200px 400px 200px;
+        grid-template-columns: 0.5fr 4fr 0.5fr;
+        grid-template-rows: 2fr 4fr 2fr;
     }
     .head_block {
         background-image: url("../../images/pattern-circles.svg");
@@ -30,20 +30,20 @@ $thin: 600;
             ". . ."
             ". center ."
             ". . .";
-        grid-template-columns: 20px 340px 20px;
-        grid-template-rows: 50px 100px 50px;
+        grid-template-columns: 0.5fr 4fr 0.5fr;
+        grid-template-rows: 0.5fr 1fr 0.5fr;
         .title_head {
-            font-size: 25px;
+            font-size: 2em;
             font-weight: $bold;
             text-align: center;
-            margin: 20px 0 0 0;
+            margin: 15% 0 0 0;
             grid-area: center;
         }
         .subtitle_head {
             color: hsl(225, 20%, 60%);
-            font-size: 16px;
+            font-size: 1.5em;
             text-align: center;
-            margin: 50px 0 0 0;
+            margin: 45% 0 0 0;
             grid-area: center;
         }
     }
@@ -57,25 +57,26 @@ $thin: 600;
             "MValue"
             "choice"
             "bottom";
-        grid-template-columns: 380px;
-        grid-template-rows: 50px 100px 50px 50px 150px;
+        grid-template-columns: 4fr;
+        grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr 2fr;
         .pageViews {
             color: hsl(225, 20%, 60%);
             text-align: center;
-            margin: 20px 0 0 0;
-            font-size: 16px;
+            margin: 15% 0 0 0;
+            font-size: 1.4em;
             grid-area: pageV;
             display: grid;
             grid-template-areas: 
                 ". Value pageView .";
-            grid-template-columns: 140px 50px 50px 140px;
-            grid-template-rows: 50px;
+            grid-template-columns: 2fr 0.5fr 0.5fr 2fr;
+            grid-template-rows: 0.5fr;
             p{
-                font-size: 20px;
+                font-size: 1.4em;
                 grid-area: Value;
             }
             .pageViews_title{
-                font-size: 20px;
+                font-size: 1.4em;
+                margin: 0 0 0 10%;
                 grid-area: pageView;
             }
         }
@@ -84,18 +85,18 @@ $thin: 600;
         display: grid;
         grid-template-areas: 
             ". value title .";
-        grid-template-columns: 100px 90px 90px 100px;
-        grid-template-rows: 50px;
+        grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+        grid-template-rows: 0.5fr;
         grid-area: MValue;
         .value_month {
             grid-area: value;
-            font-size: 25px;
+            font-size: 2em;
         }
         .monthTitle {
             color: hsl(225, 20%, 60%);
             grid-area: title;
-            font-size: 20px;
-            margin: 0 0 0 10px;
+            font-size: 1.4em;
+            margin: 0 0 0 20%;
         }
     }
     .choice_block {
@@ -105,34 +106,32 @@ $thin: 600;
         display: grid;
         grid-template-areas: 
             "month switch yearly discount";
-        grid-template-columns: 130px 60px 110px 85px;
-        grid-template-rows: 50px;
-        .month_choice {
-            margin: 0 0 0 20px;
-            padding: 10px 0 0 0;
-            font-size: 14px;
+        grid-template-columns: 2fr 0.5fr 2fr 0.5fr; 
+        grid-template-rows: 0.5fr;
+        .month_choice { 
+            padding: 5% 0 0 10%;
+            font-size: 1.2em;
             grid-area: month;
             color: hsl(225, 20%, 60%);
         }
         .yearly_choice {
-            color: hsl(225, 20%, 60%);
-            margin: 0 0  0 20px;
-            padding: 10px 0 0 0;
-            font-size: 14px;
+            color: hsl(225, 20%, 60%); 
+            padding: 5% 0 0 10%;
+            font-size: 1.2em;
             grid-area: yearly;
         }
         .discount_value {
             grid-area: discount;
-            font-size: 14px;
-            border-radius: 10px;
+            font-size: 1.2em;
+            border-radius: 10vh;
             background-color: hsl(14, 92%, 95%);
             border-color: hsl(14, 92%, 95%);
-            width: 50%;
-            height: 30%;
+            width: 100%;
+            height: 40%;
             text-align: center;
             color: hsl(15, 100%, 70%);
-            margin: 10px 0 0 0;
-            padding: 5px 0 0 0;
+            margin: 10% 0 0 0;
+            padding: 5% 0 0 0;
         }
         .discount {
             display: none;
@@ -146,38 +145,41 @@ $thin: 600;
             ". ownership ."
             ". email ."
             ". btn .";
-        grid-template-rows: 30px 30px 30px 50px;
-        grid-template-columns: 120px 140px 120px;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
         .unlimited_item {
             color: hsl(225, 20%, 60%);
-            margin: 0 0 0 5px;
-            padding: 10px 0 0 0;
+            margin: 0 0 0 5%;
+            padding: 5% 0 0 0;
             grid-area: unlimited;
         }
         .ownership_item {
             color: hsl(225, 20%, 60%);
-            padding: 10px 0 0 0;
+            padding: 5% 0 0 0;
             grid-area: ownership;
         }
         .email_item {
             color: hsl(225, 20%, 60%);
-            padding: 10px 0 0 0;
-            margin: 0 0 0 20px;
+            padding: 5% 0 0 0;
+            margin: 0 0 0 15%;
             grid-area: email;
         }
         .trial_btn {
-            margin: 10px 0 0 0;
-            padding: 3px 0 0 0;
+            margin: 5% 0 0 0;
+            padding: 2% 0 0 0;
             grid-area: btn;
-            width: 140px;
-            height: 30px;
-            border-radius: 10px;
+            width: 100%;
+            height: 50%;
+            border-radius: 5vh;
             border-color: hsl(227, 35%, 25%);
             background-color: hsl(227, 35%, 25%);
             color: white;
         }
     }
     .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: hsl(228, 45%, 44%);
         grid-area: footer;
     }
 }
