@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/Captura de tela de 2022-02-21 14-57-59.png)
+![](./images/Captura.png)
 
 ### Links
 
