@@ -1,6 +1,7 @@
 $bold: 800;
 $thin: 600;
 @media screen and (min-width: 801px) and (max-width: 1024px){
+//basic universal style set
     *{
         margin: 0;
         padding: 0;
@@ -8,10 +9,12 @@ $thin: 600;
         font-family: Manrope;
         color: hsl(225, 20%, 60%);
     }
+    //body grid layout and styles
     body{
         background-image: url("../../images/bg-pattern.svg");
         background-color: hsl(230, 100%, 99%);
         background-repeat: no-repeat;
+        background-size: 100%;
         display: grid;
         grid-template-areas: 
             ". head ."
@@ -20,6 +23,7 @@ $thin: 600;
         grid-template-columns: 2fr 6fr 2fr;
         grid-template-rows: 2fr 4fr 2fr;
     }
+    //header block style and sub grid set
     .head_block{
         background-image: url("../../images/pattern-circles.svg");
         background-repeat: no-repeat;
@@ -34,6 +38,7 @@ $thin: 600;
         grid-template-columns: 1fr 4fr 1fr;
         grid-template-rows: 0.5fr 1fr 0.5fr;
         grid-area: head;
+        //title and subtitle styles and positions
         .title_head{
             font-size: 2.5em;
             font-weight: $bold;
@@ -49,6 +54,7 @@ $thin: 600;
             grid-area: center;
         }
     }
+    //main block subgrid
     .main_block{
         display: grid;
         grid-template-areas: 
@@ -60,25 +66,29 @@ $thin: 600;
         grid-template-rows: 0.5fr 1fr 0.5fr 2fr;
         grid-area: main;
         background-color: white;
+        //page views block styles and grid
         .pageViews{
-                grid-area: pageViews;
-                display: grid;
-                grid-template-areas: 
-                    "value title";
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr;
-                margin: 10% 0 0 0;
+            grid-area: pageViews;
+            display: grid;
+            grid-template-areas: 
+                "value title";
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            margin: 10% 0 0 0;
+            //title block
             .pageViews_title{
                 font-size: 1.4em;
                 padding: 10% 0 0 15%;
                 grid-area: title;
             }
+            //number block
             p{
                 padding: 10% 0 0 50%;
                 font-size: 1.4em;
                 grid-area: value;
             }
         }
+        //value per month texts block
         .MonthValue_block{
             display: grid;
             grid-template-areas: 
@@ -87,21 +97,25 @@ $thin: 600;
             grid-template-rows: 0.5fr;
             grid-area: monthBlock;
             margin: 15% 0 0 0;
+            //value per month
             .value_month{
                 padding: 0 0 0 15%;
                 font-size: 2em;
                 grid-area: value;
                 color: black;
             }
+            //text next to the value
             .monthTitle{
                 font-size: 1.4em;
                 padding: 10% 0 0 25%;
                 grid-area: title;
             }
         }
+        //slider position only
         .slidecontainer{
             grid-area: slider;
         }
+        //switch block
         .choice_block{
             display: grid;
             grid-template-areas: 
@@ -109,19 +123,23 @@ $thin: 600;
             grid-template-columns: 1.5fr 2fr 0.7fr 2fr 1fr 1fr;
             grid-template-rows: 0.5fr;
             grid-area: choiceBlock;
+            //month option block
             .month_choice{
                 padding: 5% 0 0 20%;
                 font-size: 1.2em;
                 grid-area: monthly;
             }
+            //switch position only
             .switch{
                 grid-area: switch;
             }
+            //year option block
             .yearly_choice{
                 padding: 5% 0 0 20%;
                 font-size: 1.2em;
                 grid-area: yearly;
             }
+            //discount value
             .discount_value {
                 font-size: 1.2em;
                 border-radius: 10vh;
@@ -133,6 +151,7 @@ $thin: 600;
                 grid-area: discount;
                 color: hsl(15, 100%, 70%);
             }
+            //discount text
             .discount{
                 font-size: 1.2em;
                 border-radius: 10vh;
@@ -145,6 +164,7 @@ $thin: 600;
                 color: hsl(15, 100%, 70%);
             }
         }
+        //main's bottom block
         .list_block{
            display:grid;
             grid-area: bottom;
@@ -154,7 +174,7 @@ $thin: 600;
                 ". email .";
             grid-template-rows: 0.2fr 0.2fr 0.2fr;
             grid-template-columns: 1fr 3fr 2fr;
-        
+            //text about unlimited websites
             .unlimited_item {
                 color: hsl(225, 20%, 60%);
                 font-size: 1.2em;
@@ -162,12 +182,14 @@ $thin: 600;
                 padding: 25% 0 0 0;
                 grid-area: unlimited;
             }
+            //text about data ownership
             .ownership_item {
                 color: hsl(225, 20%, 60%);
                 font-size: 1.2em;
                 padding: 3% 0 0 0;
                 grid-area: ownership;
             }
+            //text about email reports
             .email_item {
                 color: hsl(225, 20%, 60%);
                 font-size: 1.2em;
@@ -175,6 +197,7 @@ $thin: 600;
                 margin: 0 0 25% 0;
                 grid-area: email;
             }
+            //bottom's button
             .trial_btn {
                 padding: 1% 0 0 0;
                 grid-area: btn;
@@ -188,8 +211,11 @@ $thin: 600;
             }
         }
     }
-
+    //page attribution and author
     .attribution{
+        font-size: 11px;
+        text-align: center;
+        color: hsl(228, 45%, 44%);
         grid-area: footer;
     }
 }

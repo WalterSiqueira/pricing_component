@@ -1,16 +1,19 @@
 $bold: 800;
 $thin: 600;
 @media screen and (max-width: 800px) {
+//basic universal style set
     * {
         padding: 0;
         margin: 0;
         font-size: 1em;
         font-family: Manrope;
     }
+    //body grid layout and styles
     body {
         background-image: url("../../images/bg-pattern.svg");
         background-color: hsl(230, 100%, 99%);
         background-repeat: no-repeat;
+        background-size: 100%;
         display: grid;
         grid-template-areas: 
             ". head ."
@@ -19,6 +22,7 @@ $thin: 600;
         grid-template-columns: 0.5fr 4fr 0.5fr;
         grid-template-rows: 2fr 4fr 2fr;
     }
+    //header block style and sub grid set
     .head_block {
         background-image: url("../../images/pattern-circles.svg");
         background-repeat: no-repeat;
@@ -32,6 +36,7 @@ $thin: 600;
             ". . .";
         grid-template-columns: 0.5fr 4fr 0.5fr;
         grid-template-rows: 0.5fr 1fr 0.5fr;
+        //title and subtitle styles and positions
         .title_head {
             font-size: 2em;
             font-weight: $bold;
@@ -47,6 +52,7 @@ $thin: 600;
             grid-area: center;
         }
     }
+    //main block subgrid
     .main_block {
         background-color: white;
         display: grid;
@@ -59,6 +65,7 @@ $thin: 600;
             "bottom";
         grid-template-columns: 4fr;
         grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr 2fr;
+        //page views block styles and grid
         .pageViews {
             color: hsl(225, 20%, 60%);
             text-align: center;
@@ -70,10 +77,12 @@ $thin: 600;
                 ". Value pageView .";
             grid-template-columns: 2fr 0.5fr 0.5fr 2fr;
             grid-template-rows: 0.5fr;
+            //number block
             p{
                 font-size: 1.4em;
                 grid-area: Value;
             }
+            //title block
             .pageViews_title{
                 font-size: 1.4em;
                 margin: 0 0 0 10%;
@@ -81,6 +90,7 @@ $thin: 600;
             }
         }
     }
+    //value per month texts block
     .MonthValue_block {
         display: grid;
         grid-template-areas: 
@@ -88,10 +98,12 @@ $thin: 600;
         grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
         grid-template-rows: 0.5fr;
         grid-area: MValue;
+        //value per month
         .value_month {
             grid-area: value;
             font-size: 2em;
         }
+        //text next to the value
         .monthTitle {
             color: hsl(225, 20%, 60%);
             grid-area: title;
@@ -99,6 +111,7 @@ $thin: 600;
             margin: 0 0 0 20%;
         }
     }
+    //switch block
     .choice_block {
         width: 100%;
         height: 100%;
@@ -108,18 +121,21 @@ $thin: 600;
             "month switch yearly discount";
         grid-template-columns: 2fr 0.5fr 2fr 0.5fr; 
         grid-template-rows: 0.5fr;
+        //month option block
         .month_choice { 
             padding: 5% 0 0 10%;
             font-size: 1.2em;
             grid-area: month;
             color: hsl(225, 20%, 60%);
         }
+        //year option block
         .yearly_choice {
             color: hsl(225, 20%, 60%); 
             padding: 5% 0 0 10%;
             font-size: 1.2em;
             grid-area: yearly;
         }
+        //discount value
         .discount_value {
             grid-area: discount;
             font-size: 1.2em;
@@ -133,10 +149,12 @@ $thin: 600;
             margin: 10% 0 0 0;
             padding: 5% 0 0 0;
         }
+        //discount text
         .discount {
             display: none;
         }
     }
+    //main's bottom block
     .list_block {
         display:grid;
         grid-area: bottom;
@@ -147,23 +165,27 @@ $thin: 600;
             ". btn .";
         grid-template-rows: 0.5fr 0.5fr 0.5fr 1fr;
         grid-template-columns: 1fr 2fr 1fr;
+        //text about unlimited websites
         .unlimited_item {
             color: hsl(225, 20%, 60%);
             margin: 0 0 0 5%;
             padding: 5% 0 0 0;
             grid-area: unlimited;
         }
+        //text about data ownership
         .ownership_item {
             color: hsl(225, 20%, 60%);
             padding: 5% 0 0 0;
             grid-area: ownership;
         }
+        //text about email reports
         .email_item {
             color: hsl(225, 20%, 60%);
             padding: 5% 0 0 0;
             margin: 0 0 0 15%;
             grid-area: email;
         }
+        //bottom's button
         .trial_btn {
             margin: 5% 0 0 0;
             padding: 2% 0 0 0;
@@ -176,6 +198,7 @@ $thin: 600;
             color: white;
         }
     }
+    //page attribution and author
     .attribution {
         font-size: 11px;
         text-align: center;

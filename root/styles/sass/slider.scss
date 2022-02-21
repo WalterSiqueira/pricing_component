@@ -5,6 +5,7 @@
 
 /* The slider itself */
 .slider1 {
+  z-index: -1;
   margin: 40px 0 0 0;
   border-radius: 10px;
   -webkit-appearance: none;  /* Override default CSS styles */
@@ -31,8 +32,8 @@
   background-image: url("../../images/icon-slider.svg");
   background-repeat: no-repeat;
   background-position: center;
-  width: 35px; /* Set a specific slider handle width */
-  height: 35px; /* Slider handle height */
+  width: 40px; /* Set a specific slider handle width */
+  height: 40px; /* Slider handle height */
   background-color: hsl(174, 86%, 45%); /* Green background */
   cursor: pointer; /* Cursor on hover */
 }

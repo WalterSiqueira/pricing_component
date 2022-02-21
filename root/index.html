@@ -13,23 +13,23 @@
     <h1 class="title_head">Simple, traffic-based pricing</h1>
     <h2 class="subtitle_head">Sign-up for our 30-day trial.</br> No credit card required.</h2>
   </header>
-  <main class="main_block">
+  <form  onchance="sliderValue()" class="main_block">
       <div class="pageViews">
           <h3 class="pageViews_title"> Pageviews</h3>
-          <p>100k</p>
+          <p id="views_value">0k</p>
       </div>
       <div class="MonthValue_block">
-          <h2 id="value" class="value_month">$100.00</h2>
-          <h3 class="monthTitle"> /month</h3>
+          <h2 id="value" class="value_month">$0.00</h2>
+          <h3 id="month" class="monthTitle"> /month</h3>
       </div>
       <div class="slidecontainer">
-        <input type="range" min="1" max="100" value="50" class="slider1" id="myRange">
+        <input type="range" min="0" max="100" value="50" step="10" class="slider1" id="myRange">
       </div>
       <section class="choice_block">
           <h4 class="month_choice">Monthly Billing</h4>
           <label class="switch">
               <input type="checkbox">
-              <span class="slider round"></span>
+              <span  id="sw_input" class="slider round"></span>
           </label>
           <h4 class="yearly_choice">Yearly Billing</h4> 
           <h4 class="discount_value">-25% 
@@ -39,13 +39,14 @@
       <h3 class="unlimited_item">✔ Unlimited websites</h3>
       <h3 class="ownership_item">✔ 100% data ownership</h3>
       <h3 class="email_item">✔ Email reports</h3>
-      <button class="trial_btn">Start my trial</button>
+      <button class="trial_btn" id="trial_btn">Start my trial</button>
     </section>
-  </main>
+  </form>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/WalterSiqueira">Walter Siqueira</a>.
   </div>
+  <script src="./engine/main.js"></script>
 </body>
 </html>
