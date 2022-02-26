@@ -1,0 +1,406 @@
+/* The switch - the box around the slider */
+/* line 2, ../sass/switch.scss */
+.switch {
+  grid-area: center;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Hide default HTML checkbox */
+/* line 11, ../sass/switch.scss */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+/* line 18, ../sass/switch.scss */
+.slider {
+  background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+  position: absolute;
+  cursor: pointer;
+  border-radius: 30px;
+  top: 0;
+  left: 0;
+  right: 10%;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/* line 32, ../sass/switch.scss */
+.slider:before {
+  position: absolute;
+  content: "";
+  border-radius: 30px;
+  height: 70%;
+  width: 25%;
+  left: 15%;
+  bottom: 15%;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/* line 45, ../sass/switch.scss */
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+/* line 49, ../sass/switch.scss */
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196F3;
+          box-shadow: 0 0 1px #2196F3;
+}
+
+/* line 53, ../sass/switch.scss */
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+@media screen and (max-width: 320px) {
+  /* line 35, ../sass/mobileS.scss */
+  * {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: Montserrat;
+  }
+
+  /* line 41, ../sass/mobileS.scss */
+  body {
+    background-color: #f6f6fe;
+    background-image: url(../../images/bg-top.svg);
+    background-repeat: no-repeat;
+    background-position-x: 200px;
+    background-size: 75%;
+    display: grid;
+    grid-template-areas: "main" "bottom";
+    grid-template-columns: 100%;
+    grid-template-rows: 1210px 50px;
+  }
+
+  /* line 54, ../sass/mobileS.scss */
+  .main_block {
+    display: grid;
+    grid-template-areas: ". head ."  ". basic ." ". pro ." ". master .";
+    grid-template-columns: 20px 280px 20px;
+    grid-template-rows: 100px 350px 350px 350px;
+    grid-row-gap: 20px;
+    grid-area: main;
+  }
+
+  /* line 66, ../sass/mobileS.scss */
+  .head_block {
+    display: grid;
+    grid-template-areas: "title title title" "annual switch month";
+    grid-template-columns: 106px 106px 106px;
+    grid-template-rows: 50px 50px;
+    grid-area: head;
+  }
+  /* line 74, ../sass/mobileS.scss */
+  .head_block .title {
+    font-size: 20px;
+    padding: 5% 0 0 33%;
+    grid-area: title;
+  }
+  /* line 79, ../sass/mobileS.scss */
+  .head_block .switch_block {
+    display: grid;
+    grid-template-areas: ". . ." ". center ." ". . .";
+    grid-template-columns: 10px 86px 10px;
+    grid-template-rows: 10px 30px 10px;
+    grid-area: switch;
+  }
+  /* line 89, ../sass/mobileS.scss */
+  .head_block .annual_option {
+    font-size: 14px;
+    padding: 20% 0 0 40%;
+    grid-area: annual;
+  }
+  /* line 94, ../sass/mobileS.scss */
+  .head_block .month_option {
+    font-size: 14px;
+    padding: 20% 20% 0 0;
+    grid-area: month;
+  }
+
+  /* line 100, ../sass/mobileS.scss */
+  .basic_option_block {
+    background-color: white;
+    width: 280px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-areas: "title" "value" "storage" "allowed" "send" "btn";
+    grid-template-rows: 30px 100px 30px 30px 30px 80px;
+    grid-gap: 10px;
+    grid-template-columns: 100%;
+    grid-area: basic;
+  }
+
+  /* line 104, ../sass/mobileS.scss */
+  .basic_title {
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    grid-area: title;
+  }
+
+  /* line 110, ../sass/mobileS.scss */
+  .basic_monthly_value {
+    text-align: center;
+    padding: 30px;
+    font-size: 50px;
+    grid-area: value;
+  }
+
+  /* line 116, ../sass/mobileS.scss */
+  .basic_annually_value {
+    text-align: center;
+    padding: 30px;
+    font-size: 50px;
+    grid-area: value;
+    display: none;
+  }
+
+  /* line 123, ../sass/mobileS.scss */
+  .basic_storage {
+    text-align: center;
+    padding: 10px;
+    color: #6d708d;
+    grid-area: storage;
+  }
+
+  /* line 129, ../sass/mobileS.scss */
+  .basic_userAllowance {
+    text-align: center;
+    padding: 10px;
+    color: #6d708d;
+    grid-area: allowed;
+  }
+
+  /* line 135, ../sass/mobileS.scss */
+  .basic_send {
+    text-align: center;
+    padding: 10px;
+    color: #6d708d;
+    grid-area: send;
+  }
+
+  /* line 141, ../sass/mobileS.scss */
+  .basic_learnMore {
+    background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+    background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 90%;
+    margin: 20px 0 0 10px;
+    grid-area: btn;
+  }
+
+  /* line 145, ../sass/mobileS.scss */
+  .professional_option_block {
+    background-color: white;
+    width: 280px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-areas: "title" "value" "storage" "allowed" "send" "btn";
+    grid-template-rows: 30px 100px 30px 30px 30px 80px;
+    grid-gap: 10px;
+    grid-template-columns: 100%;
+    grid-area: pro;
+  }
+
+  /* line 149, ../sass/mobileS.scss */
+  .pro_title {
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    grid-area: title;
+  }
+
+  /* line 155, ../sass/mobileS.scss */
+  .pro_monthly_value {
+    text-align: center;
+    padding: 30px;
+    font-size: 50px;
+    grid-area: value;
+  }
+
+  /* line 161, ../sass/mobileS.scss */
+  .pro_annually_value {
+    text-align: center;
+    padding: 30px;
+    font-size: 50px;
+    grid-area: value;
+    display: none;
+  }
+
+  /* line 168, ../sass/mobileS.scss */
+  .pro_storage {
+    text-align: center;
+    padding: 10px;
+    color: #6d708d;
+    grid-area: storage;
+  }
+
+  /* line 174, ../sass/mobileS.scss */
+  .pro_userAllowance {
+    text-align: center;
+    padding: 10px;
+    color: #6d708d;
+    grid-area: allowed;
+  }
+
+  /* line 180, ../sass/mobileS.scss */
+  .pro_send {
+    text-align: center;
+    padding: 10px;
+    color: #6d708d;
+    grid-area: send;
+  }
+
+  /* line 186, ../sass/mobileS.scss */
+  .pro_learnMore {
+    background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+    background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 90%;
+    margin: 20px 0 0 10px;
+    grid-area: btn;
+  }
+
+  /* line 190, ../sass/mobileS.scss */
+  .master_option_block {
+    background-color: white;
+    width: 280px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-areas: "title" "value" "storage" "allowed" "send" "btn";
+    grid-template-rows: 30px 100px 30px 30px 30px 80px;
+    grid-gap: 10px;
+    grid-template-columns: 100%;
+    grid-area: master;
+  }
+
+  /* line 194, ../sass/mobileS.scss */
+  .master_title {
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    grid-area: title;
+  }
+
+  /* line 200, ../sass/mobileS.scss */
+  .master_monthly_value {
+    text-align: center;
+    padding: 30px;
+    font-size: 50px;
+    grid-area: value;
+  }
+
+  /* line 206, ../sass/mobileS.scss */
+  .master_annually_value {
+    text-align: center;
+    padding: 30px;
+    font-size: 50px;
+    grid-area: value;
+    display: none;
+  }
+
+  /* line 213, ../sass/mobileS.scss */
+  .master_storage {
+    text-align: center;
+    padding: 10px;
+    color: #6d708d;
+    grid-area: storage;
+  }
+
+  /* line 219, ../sass/mobileS.scss */
+  .master_userAllowance {
+    text-align: center;
+    padding: 10px;
+    color: #6d708d;
+    grid-area: allowed;
+  }
+
+  /* line 225, ../sass/mobileS.scss */
+  .master_send {
+    text-align: center;
+    padding: 10px;
+    color: #6d708d;
+    grid-area: send;
+  }
+
+  /* line 231, ../sass/mobileS.scss */
+  .master_learnMore {
+    background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+    background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 90%;
+    margin: 20px 0 0 10px;
+    grid-area: btn;
+  }
+
+  /* line 236, ../sass/mobileS.scss */
+  .attribution {
+    grid-area: bottom;
+  }
+
+  /* line 239, ../sass/mobileS.scss */
+  .value {
+    margin: 30px 0 0 0;
+    color: #b3aeae;
+    width: 90%;
+    height: 5px;
+    border-style: hidden hidden solid hidden;
+    margin-top: 100px;
+    grid-area: value;
+  }
+
+  /* line 244, ../sass/mobileS.scss */
+  .storage {
+    margin: 30px 0 0 0;
+    color: #b3aeae;
+    width: 90%;
+    height: 5px;
+    border-style: hidden hidden solid hidden;
+    grid-area: storage;
+  }
+
+  /* line 248, ../sass/mobileS.scss */
+  .allowance {
+    margin: 30px 0 0 0;
+    color: #b3aeae;
+    width: 90%;
+    height: 5px;
+    border-style: hidden hidden solid hidden;
+    grid-area: allowed;
+  }
+
+  /* line 252, ../sass/mobileS.scss */
+  .send {
+    margin: 30px 0 0 0;
+    color: #b3aeae;
+    width: 90%;
+    height: 5px;
+    border-style: hidden hidden solid hidden;
+    grid-area: send;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
