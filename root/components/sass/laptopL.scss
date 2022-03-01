@@ -1,3 +1,262 @@
+@mixin options_blocks {
+    background-color: white;
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-areas:
+        "title"
+        "value"
+        "storage"
+        "allowed"
+        "send"
+        "btn";
+    grid-template-rows: 30px 100px 30px 30px 30px 80px; 
+    grid-gap: 10px;
+    grid-template-columns: 100%;
+}
+@mixin lineStyles {
+    margin: 30px 0 0 5%;
+    color: rgb(179, 174, 174);
+    width: 85%;
+    height: 5px;
+    border-style: hidden hidden solid hidden;
+}
+@mixin btnStyles {
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 90%;
+    margin: 20px 0 0 10px;
+}
+$backgroundColor: hsl(240, 78%, 98%);
 @media screen and (min-width: 1025px) {
-    
+        * {
+        padding: 0;
+        margin: 0;
+        font-size: 12px;
+        font-family: Montserrat;  
+    }
+    body {
+        background-image: url(../../images/bg-top.svg);        
+        background-repeat: no-repeat;
+        background-position-x: 700px;
+        background-size:  30%;
+        background-color: $backgroundColor;
+        display: grid;
+        grid-template-areas: 
+            ". head ."
+            ". main ."
+            ". bottom .";
+        grid-template-columns: 304px 824px 304px;
+        grid-gap: 10px;
+        grid-template-rows: 100px 400px 100px;
+    }
+        .head_block {
+                display: grid;
+                grid-template-areas: 
+                    "title title title"
+                    "annual switch month";
+                grid-template-columns: 69px 69px 69px;
+                grid-template-rows: 50px 50px;
+                margin: 0 0 0 38%;
+                grid-area: head;
+                .title {
+                    font-size: 20px;
+                    padding: 5% 0 0 24%;
+                    grid-area: title;
+                }
+                .switch_block {
+                    display: grid;
+                    grid-template-areas: 
+                        "."
+                        "center"
+                        ".";
+                    grid-template-columns: 100%;
+                    grid-template-rows: 10px 30px 10px;
+                    grid-area: switch;
+                }
+                .annual_option {
+                    font-size: 14px;
+                    padding: 20% 0 0 0;
+                    grid-area: annual;
+                }
+                .month_option {
+                    font-size: 14px;
+                    padding: 20% 0 0 10px;
+                    grid-area: month;
+                }
+            }
+    .main_block {
+        padding: 20px 0 0 0;
+        background-blend-mode: $backgroundColor;
+        display: grid;
+        grid-template-areas:  
+            "basic pro master";
+        grid-template-columns: 274px 274px 274px;
+        grid-template-rows:  350px;
+        grid-gap: 5px;
+        grid-area: main;
+    } 
+            .basic_option_block {
+                @include options_blocks();    
+                grid-area: basic;
+            }
+                .basic_title {
+                    text-align: center;
+                    padding: 15px;
+                    font-size: 18px;
+                    grid-area: title;
+                }
+                .basic_monthly_value {
+                    text-align: center;
+                    padding: 30px;
+                    font-size: 50px;
+                    grid-area: value;
+                }
+                .basic_annually_value {
+                    text-align: center;
+                    padding: 30px;
+                    font-size: 50px;
+                    grid-area: value;
+                    display: none;
+                }
+                .basic_storage {
+                    text-align: center;
+                    padding: 10px;
+                    color: hsl(233, 13%, 49%);
+                    grid-area: storage;
+                }
+                .basic_userAllowance {
+                    text-align: center;
+                    padding: 10px;
+                    color: hsl(233, 13%, 49%);
+                    grid-area: allowed;
+                }
+                .basic_send {
+                    text-align: center;
+                    padding: 10px;
+                    color: hsl(233, 13%, 49%);
+                    grid-area: send;
+                }
+                .basic_learnMore {
+                    @include btnStyles();
+                    grid-area: btn;
+                }
+            .professional_option_block {
+                @include options_blocks();
+                grid-area: pro;
+            }
+                .pro_title {
+                    text-align: center;
+                    padding: 15px;
+                    font-size: 18px;
+                    grid-area: title;
+                }
+                .pro_monthly_value {
+                    text-align: center;
+                    padding: 30px;
+                    font-size: 50px;
+                    grid-area: value;
+                }
+                .pro_annually_value {
+                    text-align: center;
+                    padding: 30px;
+                    font-size: 50px;
+                    grid-area: value;
+                    display: none;
+                }
+                .pro_storage {
+                    text-align: center;
+                    padding: 10px;
+                    color: hsl(233, 13%, 49%);
+                    grid-area: storage;
+                }
+                .pro_userAllowance {
+                    text-align: center;
+                    padding: 10px;
+                    color: hsl(233, 13%, 49%);
+                    grid-area: allowed;
+                }
+                .pro_send {
+                    text-align: center;
+                    padding: 10px;
+                    color: hsl(233, 13%, 49%);
+                    grid-area: send;
+                }
+                .pro_learnMore {
+                    @include btnStyles();
+                    grid-area: btn;
+                }
+            .master_option_block {
+                @include options_blocks();
+                grid-area: master;
+            }
+                .master_title {
+                    text-align: center;
+                    padding: 15px;
+                    font-size: 18px;
+                    grid-area: title;
+                }
+                .master_monthly_value {
+                    text-align: center;
+                    padding: 30px;
+                    font-size: 50px;
+                    grid-area: value;
+                }
+                .master_annually_value {
+                    text-align: center;
+                    padding: 30px;
+                    font-size: 50px;
+                    grid-area: value;
+                    display: none;
+                }
+                .master_storage {
+                    text-align: center;
+                    padding: 10px;
+                    color: hsl(233, 13%, 49%);
+                    grid-area: storage;
+                }
+                .master_userAllowance {
+                    text-align: center;
+                    padding: 10px;
+                    color: hsl(233, 13%, 49%);
+                    grid-area: allowed;
+                }
+                .master_send {
+                    text-align: center;
+                    padding: 10px;
+                    color: hsl(233, 13%, 49%);
+                    grid-area: send;
+                }
+                .master_learnMore {
+                    @include btnStyles();
+                    grid-area: btn;
+                }
+        
+        .attribution {
+            grid-area: bottom;
+        }
+        .value {
+            @include lineStyles();
+            margin-top: 100px;  
+            grid-area: value;
+        }
+        .storage {
+            @include lineStyles();
+            grid-area: storage;
+        }
+        .allowance {
+            @include lineStyles();
+            grid-area: allowed;
+        }
+        .send {
+            @include lineStyles();
+            grid-area: send;
+        } 
+    .attribution {
+        grid-area: bottom;
+    }
 }
