@@ -1,8 +1,8 @@
 @mixin options_blocks {
     background-color: white;
-    width: 208px;
-    height: 350px;
-    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 2vh;
     display: grid;
     grid-template-areas:
         "title"
@@ -11,32 +11,32 @@
         "allowed"
         "send"
         "btn";
-    grid-template-rows: 30px 100px 30px 30px 30px 80px; 
-    grid-gap: 10px;
+    grid-template-rows: 0.2fr 1fr 0.2fr 0.2fr 0.2fr 1fr; 
+    grid-gap: 2%;
     grid-template-columns: 100%;
 }
 @mixin lineStyles {
-    margin: 30px 0 0 0;
+    margin: 16% 0 0 0;
     color: rgb(179, 174, 174);
     width: 90%;
-    height: 5px;
+    height: 1%;
     border-style: hidden hidden solid hidden;
 }
 @mixin btnStyles {
     background-image: linear-gradient(to right, hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
     color: white;
     border: none;
-    border-radius: 10px;
-    height: 40px;
+    border-radius: 2vh;
+    height: 55%;
     width: 90%;
-    margin: 20px 0 0 10px;
+    margin: 5% 0 0 2%;
 }
 $backgroundColor: hsl(240, 78%, 98%);
 @media screen and (min-width: 801px) and (max-width: 1024px) {
     * {
         padding: 0;
         margin: 0;
-        font-size: 12px;
+        font-size: 1em;
         font-family: Montserrat;  
     }
     body {
@@ -50,20 +50,20 @@ $backgroundColor: hsl(240, 78%, 98%);
             ". head ."
             ". main ."
             ". bottom .";
-        grid-template-columns: 200px 624px 200px;
-        grid-template-rows: 100px 400px 100px;
+        grid-template-columns: 2fr 6fr 2fr;
+        grid-template-rows: 1fr 4fr 1fr;
     }
         .head_block {
                 display: grid;
                 grid-template-areas: 
                     "title title title"
                     "annual switch month";
-                grid-template-columns: 69px 69px 69px;
-                grid-template-rows: 50px 50px;
-                margin: 0 0 0 34%;
+                grid-template-columns: 0.2fr 0.2fr 0.2fr;
+                grid-template-rows: 0.5fr 0.5fr;
+                margin: 0 0 0 32%;
                 grid-area: head;
                 .title {
-                    font-size: 20px;
+                    font-size: 1.25em;
                     padding: 5% 0 0 28%;
                     grid-area: title;
                 }
@@ -74,17 +74,17 @@ $backgroundColor: hsl(240, 78%, 98%);
                         "center"
                         ".";
                     grid-template-columns: 100%;
-                    grid-template-rows: 10px 30px 10px;
+                    grid-template-rows: 0.1fr 0.5fr 0.1fr;
                     grid-area: switch;
                 }
                 .annual_option {
-                    font-size: 14px;
-                    padding: 20% 0 0 0;
+                    font-size: 1.1em;
+                    padding: 5% 0 0 0;
                     grid-area: annual;
                 }
                 .month_option {
-                    font-size: 14px;
-                    padding: 20% 0 0 5px;
+                    font-size: 1.1em;
+                    padding: 5% 0 0 1%;
                     grid-area: month;
                 }
             }
@@ -93,9 +93,9 @@ $backgroundColor: hsl(240, 78%, 98%);
         display: grid;
         grid-template-areas:  
             "basic pro master";
-        grid-template-columns: 208px 208px 208px;
-        grid-template-rows:  350px;
-        grid-gap: 5px;
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-rows:  100%;
+        grid-gap: 1%;
         grid-area: main;
     } 
             .basic_option_block {
@@ -104,38 +104,38 @@ $backgroundColor: hsl(240, 78%, 98%);
             }
                 .basic_title {
                     text-align: center;
-                    padding: 15px;
-                    font-size: 18px;
+                    padding: 3%;
+                    font-size: 1.4em;
                     grid-area: title;
                 }
                 .basic_monthly_value {
                     text-align: center;
-                    padding: 30px;
-                    font-size: 50px;
+                    padding: 4%;
+                    font-size: 4em;
                     grid-area: value;
                 }
                 .basic_annually_value {
                     text-align: center;
-                    padding: 30px;
-                    font-size: 50px;
+                    padding: 4%;
+                    font-size: 4em;
                     grid-area: value;
                     display: none;
                 }
                 .basic_storage {
                     text-align: center;
-                    padding: 10px;
+                    padding: 2%;
                     color: hsl(233, 13%, 49%);
                     grid-area: storage;
                 }
                 .basic_userAllowance {
                     text-align: center;
-                    padding: 10px;
+                    padding: 2%;
                     color: hsl(233, 13%, 49%);
                     grid-area: allowed;
                 }
                 .basic_send {
                     text-align: center;
-                    padding: 10px;
+                    padding: 2%;
                     color: hsl(233, 13%, 49%);
                     grid-area: send;
                 }
@@ -149,38 +149,38 @@ $backgroundColor: hsl(240, 78%, 98%);
             }
                 .pro_title {
                     text-align: center;
-                    padding: 15px;
-                    font-size: 18px;
+                    padding: 3%;
+                    font-size: 1.4em;
                     grid-area: title;
                 }
                 .pro_monthly_value {
                     text-align: center;
-                    padding: 30px;
-                    font-size: 50px;
+                    padding: 4%;
+                    font-size: 4em;
                     grid-area: value;
                 }
                 .pro_annually_value {
                     text-align: center;
-                    padding: 30px;
-                    font-size: 50px;
+                    padding: 4%;
+                    font-size: 4em; 
                     grid-area: value;
                     display: none;
                 }
                 .pro_storage {
                     text-align: center;
-                    padding: 10px;
+                    padding: 2%;
                     color: hsl(233, 13%, 49%);
                     grid-area: storage;
                 }
                 .pro_userAllowance {
                     text-align: center;
-                    padding: 10px;
+                    padding: 2%;
                     color: hsl(233, 13%, 49%);
                     grid-area: allowed;
                 }
                 .pro_send {
                     text-align: center;
-                    padding: 10px;
+                    padding: 2%;
                     color: hsl(233, 13%, 49%);
                     grid-area: send;
                 }
@@ -194,38 +194,38 @@ $backgroundColor: hsl(240, 78%, 98%);
             }
                 .master_title {
                     text-align: center;
-                    padding: 15px;
-                    font-size: 18px;
+                    padding: 3%;
+                    font-size: 1.4em;
                     grid-area: title;
                 }
                 .master_monthly_value {
                     text-align: center;
-                    padding: 30px;
-                    font-size: 50px;
+                    padding: 4%;
+                    font-size: 4em;
                     grid-area: value;
                 }
                 .master_annually_value {
                     text-align: center;
-                    padding: 30px;
-                    font-size: 50px;
+                    padding: 4%;
+                    font-size: 4em;
                     grid-area: value;
                     display: none;
                 }
                 .master_storage {
                     text-align: center;
-                    padding: 10px;
+                    padding: 2%;
                     color: hsl(233, 13%, 49%);
                     grid-area: storage;
                 }
                 .master_userAllowance {
                     text-align: center;
-                    padding: 10px;
+                    padding: 2%;
                     color: hsl(233, 13%, 49%);
                     grid-area: allowed;
                 }
                 .master_send {
                     text-align: center;
-                    padding: 10px;
+                    padding: 2%;
                     color: hsl(233, 13%, 49%);
                     grid-area: send;
                 }
@@ -239,7 +239,7 @@ $backgroundColor: hsl(240, 78%, 98%);
         }
         .value {
             @include lineStyles();
-            margin-top: 100px;  
+            margin-top: 50%;  
             grid-area: value;
         }
         .storage {
