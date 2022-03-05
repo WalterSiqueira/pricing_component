@@ -111,15 +111,15 @@ $backgroundColor: hsl(240, 78%, 98%);
                 .basic_monthly_value {
                     text-align: center;
                     padding: 4%;
-                    font-size: 4em;
+                    font-size: 3em;
                     grid-area: value;
+                    display: none;
                 }
                 .basic_annually_value {
                     text-align: center;
                     padding: 4%;
-                    font-size: 4em;
+                    font-size: 3em;
                     grid-area: value;
-                    display: none;
                 }
                 .basic_storage {
                     text-align: center;
@@ -156,15 +156,15 @@ $backgroundColor: hsl(240, 78%, 98%);
                 .pro_monthly_value {
                     text-align: center;
                     padding: 4%;
-                    font-size: 4em;
+                    font-size: 3em;
                     grid-area: value;
+                    display: none;
                 }
                 .pro_annually_value {
                     text-align: center;
                     padding: 4%;
-                    font-size: 4em; 
+                    font-size: 3em; 
                     grid-area: value;
-                    display: none;
                 }
                 .pro_storage {
                     text-align: center;
@@ -201,15 +201,15 @@ $backgroundColor: hsl(240, 78%, 98%);
                 .master_monthly_value {
                     text-align: center;
                     padding: 4%;
-                    font-size: 4em;
+                    font-size: 3em;
                     grid-area: value;
+                    display: none;
                 }
                 .master_annually_value {
                     text-align: center;
                     padding: 4%;
-                    font-size: 4em;
+                    font-size: 3em;
                     grid-area: value;
-                    display: none;
                 }
                 .master_storage {
                     text-align: center;

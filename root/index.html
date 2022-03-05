@@ -6,7 +6,7 @@
   <link rel="font" href="https://fonts.google.com/specimen/Montserrat">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./components/css/main.css">
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <title>Frontend Mentor | [Pricing Component]</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -21,7 +21,7 @@
     <div class="switch_block">
       <label class="switch">
             <input type="checkbox">
-          <span class="slider"></span>
+          <span class="slider" id="toggle"></span>
       </label> 
     </div>
 
@@ -56,10 +56,10 @@
     </section>
     <section class="master_option_block">
       <h3 class="master_title">Master</h3>
-      <h1 class="master_monthly_value">&dollar;39.99</h1>
-      <h1 class="master_annually_value" id="master_monthly">&dollar;399.99</h1>
+      <h1 class="master_monthly_value" id="master_monthly">&dollar;39.99</h1>
+      <h1 class="master_annually_value" id="master_annual">&dollar;399.99</h1>
       <hr class="value">
-      <h3 class="master_storage" id="master_annual">2 TB Storage</h3>
+      <h3 class="master_storage">2 TB Storage</h3>
       <hr class="storage">
       <h3 class="master_userAllowance">10 Users Allowed</h3>
       <hr class="allowance">
@@ -68,6 +68,7 @@
       <button class="master_learnMore">Learn More</button>
     </section>
   </main>
+  <script src="./js/engine.js"></script>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
      Coded by <a href="https://github.com/WalterSiqueira">Walter Siqueira</a>. 

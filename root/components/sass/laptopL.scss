@@ -116,13 +116,13 @@ $backgroundColor: hsl(240, 78%, 98%);
                     padding: 2%;
                     font-size: 4em;
                     grid-area: value;
+                    display: none;
                 }
                 .basic_annually_value {
                     text-align: center;
                     padding: 2%;
                     font-size: 4em;
-                    grid-area: value;
-                    display: none;
+                    grid-area: value; 
                 }
                 .basic_storage {
                     text-align: center;
@@ -164,13 +164,13 @@ $backgroundColor: hsl(240, 78%, 98%);
                     padding: 4%;
                     font-size: 4em;
                     grid-area: value;
+                    display: none;
                 }
                 .pro_annually_value {
                     text-align: center;
                     padding: 4%;
                     font-size: 4em;
-                    grid-area: value;
-                    display: none;
+                    grid-area: value; 
                 }
                 .pro_storage {
                     text-align: center;
@@ -212,13 +212,13 @@ $backgroundColor: hsl(240, 78%, 98%);
                     padding: 4%;
                     font-size: 4em;
                     grid-area: value;
+                    display: none;
                 }
                 .master_annually_value {
                     text-align: center;
                     padding: 4%;
                     font-size: 4em;
-                    grid-area: value;
-                    display: none;
+                    grid-area: value; 
                 }
                 .master_storage {
                     text-align: center;

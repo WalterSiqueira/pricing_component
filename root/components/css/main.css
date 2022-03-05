@@ -160,15 +160,15 @@ input:checked + .slider:before {
     padding-top: 25%;
     font-size: 4em;
     grid-area: value;
+    display: none;
   }
 
-  /* line 118, ../sass/mobileS.scss */
+  /* line 119, ../sass/mobileS.scss */
   .basic_annually_value {
     text-align: center;
     padding-top: 25%;
     font-size: 4em;
     grid-area: value;
-    display: none;
   }
 
   /* line 125, ../sass/mobileS.scss */
@@ -235,15 +235,15 @@ input:checked + .slider:before {
     padding-top: 25%;
     font-size: 4em;
     grid-area: value;
+    display: none;
   }
 
-  /* line 163, ../sass/mobileS.scss */
+  /* line 164, ../sass/mobileS.scss */
   .pro_annually_value {
     text-align: center;
     padding-top: 25%;
     font-size: 4em;
     grid-area: value;
-    display: none;
   }
 
   /* line 170, ../sass/mobileS.scss */
@@ -310,15 +310,15 @@ input:checked + .slider:before {
     padding-top: 25%;
     font-size: 4em;
     grid-area: value;
+    display: none;
   }
 
-  /* line 208, ../sass/mobileS.scss */
+  /* line 209, ../sass/mobileS.scss */
   .master_annually_value {
     text-align: center;
     padding-top: 3%;
     font-size: 4em;
     grid-area: value;
-    display: none;
   }
 
   /* line 215, ../sass/mobileS.scss */
@@ -502,15 +502,15 @@ input:checked + .slider:before {
     padding-top: 25%;
     font-size: 4em;
     grid-area: value;
+    display: none;
   }
 
-  /* line 120, ../sass/mobileML.scss */
+  /* line 121, ../sass/mobileML.scss */
   .basic_annually_value {
     text-align: center;
     padding-top: 25%;
     font-size: 4em;
     grid-area: value;
-    display: none;
   }
 
   /* line 127, ../sass/mobileML.scss */
@@ -577,15 +577,15 @@ input:checked + .slider:before {
     padding-top: 25%;
     font-size: 4em;
     grid-area: value;
+    display: none;
   }
 
-  /* line 165, ../sass/mobileML.scss */
+  /* line 166, ../sass/mobileML.scss */
   .pro_annually_value {
     text-align: center;
     padding-top: 25%;
     font-size: 4em;
     grid-area: value;
-    display: none;
   }
 
   /* line 172, ../sass/mobileML.scss */
@@ -652,15 +652,15 @@ input:checked + .slider:before {
     padding-top: 25%;
     font-size: 4em;
     grid-area: value;
+    display: none;
   }
 
-  /* line 210, ../sass/mobileML.scss */
+  /* line 211, ../sass/mobileML.scss */
   .master_annually_value {
     text-align: center;
     padding-top: 25%;
     font-size: 4em;
     grid-area: value;
-    display: none;
   }
 
   /* line 217, ../sass/mobileML.scss */
@@ -845,15 +845,15 @@ input:checked + .slider:before {
     padding-top: 25%;
     font-size: 1.8em;
     grid-area: value;
+    display: none;
   }
 
-  /* line 120, ../sass/tablet.scss */
+  /* line 121, ../sass/tablet.scss */
   .basic_annually_value {
     text-align: center;
     padding: 25%;
     font-size: 1.8em;
     grid-area: value;
-    display: none;
   }
 
   /* line 127, ../sass/tablet.scss */
@@ -922,15 +922,15 @@ input:checked + .slider:before {
     padding: 25%;
     font-size: 1.8em;
     grid-area: value;
+    display: none;
   }
 
-  /* line 165, ../sass/tablet.scss */
+  /* line 166, ../sass/tablet.scss */
   .pro_annually_value {
     text-align: center;
     padding: 25%;
     font-size: 1.8em;
     grid-area: value;
-    display: none;
   }
 
   /* line 172, ../sass/tablet.scss */
@@ -999,15 +999,15 @@ input:checked + .slider:before {
     padding: 25%;
     font-size: 1.8em;
     grid-area: value;
+    display: none;
   }
 
-  /* line 210, ../sass/tablet.scss */
+  /* line 211, ../sass/tablet.scss */
   .master_annually_value {
     text-align: center;
     padding: 25%;
     font-size: 1.8em;
     grid-area: value;
-    display: none;
   }
 
   /* line 217, ../sass/tablet.scss */
@@ -1194,17 +1194,17 @@ input:checked + .slider:before {
   .basic_monthly_value {
     text-align: center;
     padding: 4%;
-    font-size: 4em;
+    font-size: 3em;
     grid-area: value;
+    display: none;
   }
 
-  /* line 117, ../sass/laptop.scss */
+  /* line 118, ../sass/laptop.scss */
   .basic_annually_value {
     text-align: center;
     padding: 4%;
-    font-size: 4em;
+    font-size: 3em;
     grid-area: value;
-    display: none;
   }
 
   /* line 124, ../sass/laptop.scss */
@@ -1270,17 +1270,17 @@ input:checked + .slider:before {
   .pro_monthly_value {
     text-align: center;
     padding: 4%;
-    font-size: 4em;
+    font-size: 3em;
     grid-area: value;
+    display: none;
   }
 
-  /* line 162, ../sass/laptop.scss */
+  /* line 163, ../sass/laptop.scss */
   .pro_annually_value {
     text-align: center;
     padding: 4%;
-    font-size: 4em;
+    font-size: 3em;
     grid-area: value;
-    display: none;
   }
 
   /* line 169, ../sass/laptop.scss */
@@ -1346,17 +1346,17 @@ input:checked + .slider:before {
   .master_monthly_value {
     text-align: center;
     padding: 4%;
-    font-size: 4em;
+    font-size: 3em;
     grid-area: value;
+    display: none;
   }
 
-  /* line 207, ../sass/laptop.scss */
+  /* line 208, ../sass/laptop.scss */
   .master_annually_value {
     text-align: center;
     padding: 4%;
-    font-size: 4em;
+    font-size: 3em;
     grid-area: value;
-    display: none;
   }
 
   /* line 214, ../sass/laptop.scss */
@@ -1546,15 +1546,15 @@ input:checked + .slider:before {
     padding: 2%;
     font-size: 4em;
     grid-area: value;
+    display: none;
   }
 
-  /* line 120, ../sass/laptopL.scss */
+  /* line 121, ../sass/laptopL.scss */
   .basic_annually_value {
     text-align: center;
     padding: 2%;
     font-size: 4em;
     grid-area: value;
-    display: none;
   }
 
   /* line 127, ../sass/laptopL.scss */
@@ -1625,15 +1625,15 @@ input:checked + .slider:before {
     padding: 4%;
     font-size: 4em;
     grid-area: value;
+    display: none;
   }
 
-  /* line 168, ../sass/laptopL.scss */
+  /* line 169, ../sass/laptopL.scss */
   .pro_annually_value {
     text-align: center;
     padding: 4%;
     font-size: 4em;
     grid-area: value;
-    display: none;
   }
 
   /* line 175, ../sass/laptopL.scss */
@@ -1704,15 +1704,15 @@ input:checked + .slider:before {
     padding: 4%;
     font-size: 4em;
     grid-area: value;
+    display: none;
   }
 
-  /* line 216, ../sass/laptopL.scss */
+  /* line 217, ../sass/laptopL.scss */
   .master_annually_value {
     text-align: center;
     padding: 4%;
     font-size: 4em;
     grid-area: value;
-    display: none;
   }
 
   /* line 223, ../sass/laptopL.scss */
